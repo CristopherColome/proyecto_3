@@ -1,0 +1,12 @@
+version: '3.1'
+services:
+  db-mysql:
+    image: mysql
+    container_name: db-mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: bodega
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./mysql-data:/var/lib/mysql
