@@ -5,10 +5,12 @@
  */
 package com.grupo3.repository;
 
+import com.grupo3.entity.Producto;
+
 /**
  *
  * @author ccolome
  */
-public class Test {
+public interface ProductoRepository extends BaseRepósitory<Producto, Integer>{
     
 }
