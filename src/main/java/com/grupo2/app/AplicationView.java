@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.grupo3.app;
+package com.grupo2.app;
 
-import com.grupo3.view.MainView;
+import com.grupo2.view.MainView;
 import java.awt.EventQueue;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;

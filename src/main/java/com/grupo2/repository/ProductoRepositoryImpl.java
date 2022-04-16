@@ -3,17 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.grupo3.repository;
+package com.grupo2.repository;
 
-import com.grupo3.entity.Producto;
+import com.grupo2.entity.Producto;
 import java.util.List;
+import javax.persistence.EntityManager;
+import javax.persistence.PersistenceContext;
 
 /**
  *
  * @author ccolome
  */
 public class ProductoRepositoryImpl implements ProductoRepository {
-
+    
+    @PersistenceContext
+    private EntityManager entityManager;
+    
     @Override
     public Integer registrar(Producto objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.

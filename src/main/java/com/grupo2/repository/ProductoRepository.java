@@ -3,9 +3,9 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.grupo3.repository;
+package com.grupo2.repository;
 
-import com.grupo3.entity.Producto;
+import com.grupo2.entity.Producto;
 
 /**
  *

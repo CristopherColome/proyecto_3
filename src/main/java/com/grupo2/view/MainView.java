@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.grupo3.view;
+package com.grupo2.view;
 
 import java.awt.BorderLayout;
 import javax.swing.JFrame;

@@ -8,11 +8,11 @@
         <version>2.6.6</version>
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
-    <groupId>com.grupo3</groupId>
-    <artifactId>grupo3</artifactId>
+    <groupId>com.grupo2</groupId>
+    <artifactId>grupo2</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>grupo3</name>
-    <description>Trabajo final grupo 3</description>
+    <name>grupo2</name>
+    <description>Trabajo final grupo 2</description>
     <properties>
         <java.version>1.8</java.version>
     </properties>
