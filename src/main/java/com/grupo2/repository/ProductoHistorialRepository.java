@@ -5,7 +5,7 @@
  */
 package com.grupo2.repository;
 
-import com.grupo2.entity.Usuario;
+import com.grupo2.entity.ProductoHistorial;
 import org.springframework.stereotype.Repository;
 
 /**
@@ -13,8 +13,6 @@ import org.springframework.stereotype.Repository;
  * @author ccolome
  */
 @Repository
-public interface UsuarioRepository extends BaseRepósitory<Usuario, Integer>{
-    
-    Usuario obtener(String username);
+public interface ProductoHistorialRepository extends BaseRepósitory<ProductoHistorial, Integer>{
     
 }

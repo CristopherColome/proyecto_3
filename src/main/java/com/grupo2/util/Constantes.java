@@ -3,16 +3,22 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.grupo2.repository;
-
-import com.grupo2.entity.Producto;
-import org.springframework.stereotype.Repository;
+package com.gruṕo2.util;
 
 /**
  *
  * @author ccolome
  */
-@Repository
-public interface ProductoRepository extends BaseRepósitory<Producto, Integer>{
+public class Constantes {
+
+    public enum Evento {
+        USUARIO_LOGUEADO
+    }
     
+    public enum Rol {
+        ADMINISTRADOR,
+        ALMACEN,
+        VENDEDOR
+    }
+
 }

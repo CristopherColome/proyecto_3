@@ -6,11 +6,13 @@
 package com.grupo2.repository;
 
 import java.util.List;
+import org.springframework.stereotype.Repository;
 
 /**
  *
  * @author ccolome
  */
+@Repository
 public interface BaseRepósitory<T, ID> {
     
     Integer registrar(T objeto);

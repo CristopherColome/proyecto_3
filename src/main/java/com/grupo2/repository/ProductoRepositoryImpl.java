@@ -9,11 +9,13 @@ import com.grupo2.entity.Producto;
 import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
+import org.springframework.stereotype.Service;
 
 /**
  *
  * @author ccolome
  */
+@Service
 public class ProductoRepositoryImpl implements ProductoRepository {
     
     @PersistenceContext

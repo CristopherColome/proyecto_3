@@ -5,12 +5,10 @@
  */
 package com.grupo2.app;
 
-import com.grupo2.view.MainView;
 import org.springframework.boot.WebApplicationType;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.boot.autoconfigure.jdbc.DataSourceAutoConfiguration;
 import org.springframework.boot.builder.SpringApplicationBuilder;
-import org.springframework.context.annotation.Bean;
 
 /**
  *
@@ -26,8 +24,4 @@ public class Application {
                 .run(args);
     }
 
-    @Bean
-    public MainView mainView() {
-        return new MainView();
-    }
 }

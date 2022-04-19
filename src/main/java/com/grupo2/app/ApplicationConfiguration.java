@@ -8,7 +8,9 @@ package com.grupo2.app;
 import javax.persistence.EntityManagerFactory;
 import javax.sql.DataSource;
 import org.springframework.beans.factory.annotation.Value;
+import org.springframework.boot.autoconfigure.domain.EntityScan;
 import org.springframework.context.annotation.Bean;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.data.jpa.repository.config.EnableJpaRepositories;
 import org.springframework.jdbc.datasource.DriverManagerDataSource;
@@ -23,7 +25,9 @@ import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
  * @author ccolome
  */
 @Configuration
-@EnableJpaRepositories("com.grupo3")
+@ComponentScan ({"com.grupo2"})
+@EntityScan("com.grupo2")
+@EnableJpaRepositories("com.grupo2")
 public class ApplicationConfiguration {
 
     @Value("${spring.datasource.driver-class-name}")
@@ -41,7 +45,6 @@ public class ApplicationConfiguration {
     @Bean
     public DataSource dataSource() {
         DriverManagerDataSource dataSource = new DriverManagerDataSource();
-        System.out.println(DB_DRIVER_CLASS);
         dataSource.setDriverClassName(DB_DRIVER_CLASS);
         dataSource.setUrl(DB_URL);
         dataSource.setUsername(DB_USER);
@@ -67,7 +70,7 @@ public class ApplicationConfiguration {
         LocalContainerEntityManagerFactoryBean lemfb = new LocalContainerEntityManagerFactoryBean();
         lemfb.setDataSource(dataSource());
         lemfb.setJpaVendorAdapter(jpaVendorAdapter());
-        lemfb.setPackagesToScan("com.grupo3");
+        lemfb.setPackagesToScan("com.grupo2.entity");
         return lemfb;
     }
 }

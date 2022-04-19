@@ -65,5 +65,9 @@ public class Usuario {
     public void setRol(String rol) {
         this.rol = rol;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Usuario{" + "id=" + id + ", username=" + username + ", password=" + password + ", rol=" + rol + '}';
+    }
 }

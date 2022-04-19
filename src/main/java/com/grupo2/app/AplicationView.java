@@ -18,17 +18,16 @@ import org.springframework.stereotype.Component;
 @Component
 public class AplicationView implements CommandLineRunner {
 
+    private final MainView mainView;
+
     @Autowired
-    private MainView mainView;
+    public AplicationView(MainView mainView) {
+        this.mainView = mainView;
+    }
 
     @Override
     public void run(String... args) {
-        EventQueue.invokeLater(new Runnable() {
-            @Override
-            public void run() {
-                mainView.setVisible(true);
-            }
-        });
+        EventQueue.invokeLater(() -> mainView.setVisible(true));
     }
 
 }
