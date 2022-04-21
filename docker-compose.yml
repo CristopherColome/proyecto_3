@@ -6,6 +6,7 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: root
       MYSQL_DATABASE: bodega
+      TZ: America/Lima
     ports:
       - "3306:3306"
     volumes:

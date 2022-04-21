@@ -7,7 +7,7 @@ package com.grupo2.view;
 
 import com.grupo2.entity.Usuario;
 import com.grupo2.repository.UsuarioRepository;
-import com.gruṕo2.util.Constantes.Evento;
+import com.grupo2.util.Constantes.Evento;
 import java.awt.Color;
 import java.awt.Dimension;
 import java.awt.Font;

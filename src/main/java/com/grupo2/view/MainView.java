@@ -6,10 +6,9 @@
 package com.grupo2.view;
 
 import com.grupo2.entity.Usuario;
-import com.gruṕo2.util.Constantes.Evento;
-import static com.gruṕo2.util.Constantes.Rol;
+import com.grupo2.util.Constantes.Evento;
+import static com.grupo2.util.Constantes.Rol;
 import java.awt.event.ActionEvent;
-import java.awt.event.ActionListener;
 import java.beans.PropertyChangeEvent;
 import javax.swing.Box;
 import javax.swing.JFrame;

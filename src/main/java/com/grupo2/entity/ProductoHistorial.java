@@ -14,37 +14,38 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.hibernate.annotations.CreationTimestamp;
 
 /**
  *
  * @author ccolome
  */
-
 @Entity
 @Table(name = "tb_producto_historial")
 public class ProductoHistorial {
-    
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "id")
     private Integer id;
-    
+
     @Column(name = "id_producto")
     private Integer idProducto;
-    
+
     @Column(name = "id_venta")
     private Integer idVenta;
-        
+
     @Column(name = "acceso")
     private String acceso;
-    
+
     @Column(name = "cantidad")
     private Double cantidad;
-    
+
     @Column(name = "creador")
     private String creador;
-        
-    @Column(name = "fecha_creacion")
+
+    @CreationTimestamp
+    @Column(name = "fecha_creacion", updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaCreacion;
 
@@ -104,6 +105,9 @@ public class ProductoHistorial {
         this.fechaCreacion = fechaCreacion;
     }
 
-    
-    
+    @Override
+    public String toString() {
+        return "ProductoHistorial{" + "id=" + id + ", idProducto=" + idProducto + ", idVenta=" + idVenta + ", acceso=" + acceso + ", cantidad=" + cantidad + ", creador=" + creador + ", fechaCreacion=" + fechaCreacion + '}';
+    }
+
 }

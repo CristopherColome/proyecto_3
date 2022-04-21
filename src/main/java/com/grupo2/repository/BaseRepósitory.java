@@ -15,13 +15,13 @@ import org.springframework.stereotype.Repository;
 @Repository
 public interface BaseRepósitory<T, ID> {
     
-    Integer registrar(T objeto);
+    Boolean registrar(T objeto) ;
     
     List<T> listar();
     
     T obtener(ID id);
     
-    Integer actualizar(ID id);
+    Boolean actualizar(T objeto);
     
-    Integer eliminar(ID id);
+    Boolean eliminar(ID id);
 }

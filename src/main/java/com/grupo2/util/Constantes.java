@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package com.gruṕo2.util;
+package com.grupo2.util;
 
 /**
  *
@@ -19,6 +19,11 @@ public class Constantes {
         ADMINISTRADOR,
         ALMACEN,
         VENDEDOR
+    }
+    
+    public enum PRODUCTO_ACCESO {
+        INGRESO,
+        SALIDA
     }
 
 }

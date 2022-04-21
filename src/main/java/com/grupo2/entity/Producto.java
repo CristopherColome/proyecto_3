@@ -14,6 +14,8 @@ import javax.persistence.Id;
 import javax.persistence.Table;
 import javax.persistence.Temporal;
 import javax.persistence.TemporalType;
+import org.hibernate.annotations.CreationTimestamp;
+import org.hibernate.annotations.UpdateTimestamp;
 
 /**
  *
@@ -29,8 +31,8 @@ public class Producto {
     @Column(name = "id")
     private Integer id;
     
-    @Column(name = "nombre")
-    private String nombre;
+    @Column(name = "descripcion")
+    private String descripcion;
     
     @Column(name = "precio")
     private Double precio;
@@ -43,12 +45,14 @@ public class Producto {
       
     @Column(name = "modificador")
     private String modificador;
-        
-    @Column(name = "fecha_creacion")
+    
+    @CreationTimestamp
+    @Column(name = "fecha_creacion", updatable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaCreacion;
     
-    @Column(name = "fecha_modificacion")
+    @UpdateTimestamp
+    @Column(name = "fecha_modificacion", insertable = false)
     @Temporal(TemporalType.TIMESTAMP)
     private Date fechaModificacion;
         
@@ -60,12 +64,12 @@ public class Producto {
         this.id = id;
     }
 
-    public String getNombre() {
-        return nombre;
+    public String getDescripcion() {
+        return descripcion;
     }
 
-    public void setNombre(String nombre) {
-        this.nombre = nombre;
+    public void setDescripcion(String descripcion) {
+        this.descripcion = descripcion;
     }
 
     public Double getPrecio() {
@@ -115,5 +119,9 @@ public class Producto {
     public void setFechaModificacion(Date fechaModificacion) {
         this.fechaModificacion = fechaModificacion;
     }
-    
+
+    @Override
+    public String toString() {
+        return "Producto{" + "id=" + id + ", descripcion=" + descripcion + ", precio=" + precio + ", cantidad=" + cantidad + ", creador=" + creador + ", modificador=" + modificador + ", fechaCreacion=" + fechaCreacion + ", fechaModificacion=" + fechaModificacion + '}';
+    }
 }

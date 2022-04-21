@@ -19,13 +19,16 @@ import org.springframework.orm.jpa.JpaVendorAdapter;
 import org.springframework.orm.jpa.LocalContainerEntityManagerFactoryBean;
 import org.springframework.orm.jpa.vendor.Database;
 import org.springframework.orm.jpa.vendor.HibernateJpaVendorAdapter;
+import org.springframework.transaction.PlatformTransactionManager;
+import org.springframework.transaction.annotation.EnableTransactionManagement;
 
 /**
  *
  * @author ccolome
  */
 @Configuration
-@ComponentScan ({"com.grupo2"})
+@EnableTransactionManagement
+@ComponentScan({"com.grupo2"})
 @EntityScan("com.grupo2")
 @EnableJpaRepositories("com.grupo2")
 public class ApplicationConfiguration {
@@ -73,4 +76,14 @@ public class ApplicationConfiguration {
         lemfb.setPackagesToScan("com.grupo2.entity");
         return lemfb;
     }
+
+    @Bean
+    public PlatformTransactionManager transactionManager() {
+        JpaTransactionManager transactionManager = new JpaTransactionManager();
+        transactionManager.setEntityManagerFactory(
+                entityManagerFactory().getObject()
+        );
+        return transactionManager;
+    }
+
 }

@@ -14,7 +14,7 @@
     <name>grupo2</name>
     <description>Trabajo final grupo 2</description>
     <properties>
-        <java.version>1.8</java.version>
+        <java.version>1.8</java.version>      
     </properties>
     <dependencies>
         <dependency>
@@ -30,6 +30,12 @@
             <groupId>org.apache.shiro</groupId>
             <artifactId>shiro-core</artifactId>
             <version>1.3.0</version>
+            <type>jar</type>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-tx</artifactId>
+            <version>5.3.18</version>
             <type>jar</type>
         </dependency>
         <dependency>

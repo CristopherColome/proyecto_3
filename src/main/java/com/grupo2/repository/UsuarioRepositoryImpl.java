@@ -10,6 +10,8 @@ import java.util.List;
 import javax.persistence.EntityManager;
 import javax.persistence.PersistenceContext;
 import javax.persistence.Query;
+import org.apache.logging.log4j.LogManager;
+import org.apache.logging.log4j.Logger;
 import org.springframework.stereotype.Service;
 
 /**
@@ -18,12 +20,14 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class UsuarioRepositoryImpl implements UsuarioRepository {
-    
+
+    private static final Logger LOG = LogManager.getLogger(UsuarioRepositoryImpl.class);
+
     @PersistenceContext
     private EntityManager entityManager;
-    
+
     @Override
-    public Integer registrar(Usuario objeto) {
+    public Boolean registrar(Usuario objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
@@ -36,7 +40,7 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
     public Usuario obtener(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
     @Override
     public Usuario obtener(String username) {
         Query query = entityManager.createQuery("FROM Usuario U WHERE U.username = :username");
@@ -45,13 +49,13 @@ public class UsuarioRepositoryImpl implements UsuarioRepository {
     }
 
     @Override
-    public Integer actualizar(Integer id) {
+    public Boolean actualizar(Usuario objeto) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
 
     @Override
-    public Integer eliminar(Integer id) {
+    public Boolean eliminar(Integer id) {
         throw new UnsupportedOperationException("Not supported yet."); //To change body of generated methods, choose Tools | Templates.
     }
-    
+
 }
